@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../DataPath.srcs/sources_1/new/CU.v" \
+"../../../../DataPath.srcs/sources_1/new/calculatorFPGA.v" \
+"../../../../DataPath.srcs/sources_1/imports/CMPE 125 Lab 7 Small Calculator DP Source Code/small_calculator_dp.v" \
+"../../../../DataPath.srcs/sim_1/new/cal_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

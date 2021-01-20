@@ -1,0 +1,448 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Nov  2 15:17:20 2019
+# Process ID: 14136
+# Current directory: C:/Users/Phat Le/DataPath/DataPath.runs/synth_1
+# Command line: vivado.exe -log FPGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FPGA.tcl
+# Log file: C:/Users/Phat Le/DataPath/DataPath.runs/synth_1/FPGA.vds
+# Journal file: C:/Users/Phat Le/DataPath/DataPath.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source FPGA.tcl -notrace
+Command: synth_design -top FPGA -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2124 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 701.410 ; gain = 177.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'FPGA' [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/FPGA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_gen' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/clk_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen' (1#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/clk_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'button_debouncer' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/basys3_utility_modules/basys3_utility_modules/button_debouncer.v:1]
+	Parameter depth bound to: 16 - type: integer 
+	Parameter history_max bound to: 65535 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'button_debouncer' (2#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/basys3_utility_modules/basys3_utility_modules/button_debouncer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'calculatorFPGA' [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/calculatorFPGA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'CU' [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/CU.v:23]
+	Parameter Init bound to: 4'b0000 
+	Parameter W1 bound to: 4'b0001 
+	Parameter W2 bound to: 4'b0010 
+	Parameter Wait bound to: 4'b0011 
+	Parameter addOP bound to: 4'b0100 
+	Parameter minOP bound to: 4'b0101 
+	Parameter andOP bound to: 4'b0110 
+	Parameter xorOP bound to: 4'b0111 
+	Parameter out bound to: 4'b1000 
+INFO: [Synth 8-6155] done synthesizing module 'CU' (3#1) [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/CU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'small_calculator_dp' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/small_calculator_dp.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux4' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/mux4.v:1]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux4' (4#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/mux4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/register_file.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (5#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/register_file.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (6#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/mux2.v:1]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (7#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/mux2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'small_calculator_dp' (8#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/small_calculator_dp.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'calculatorFPGA' (9#1) [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/calculatorFPGA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'binary2bcd' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/binary2bcd.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'binary2bcd' (10#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/binary2bcd.v:3]
+WARNING: [Synth 8-689] width (1) of port connection 'hundreds' does not match port width (4) of module 'binary2bcd' [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/FPGA.v:79]
+INFO: [Synth 8-6157] synthesizing module 'bcd_to_7seg' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/bcd_to_7seg.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'bcd_to_7seg' (11#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/bcd_to_7seg.v:22]
+INFO: [Synth 8-6157] synthesizing module 'led_mux' [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/led_mux.v:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/led_mux.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'led_mux' (12#1) [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/led_mux.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FPGA' (13#1) [C:/Users/Phat Le/DataPath/DataPath.srcs/sources_1/new/FPGA.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 764.836 ; gain = 240.824
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 764.836 ; gain = 240.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 764.836 ; gain = 240.824
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Phat Le/DataPath/DataPath.srcs/constrs_1/new/calculator_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Phat Le/DataPath/DataPath.srcs/constrs_1/new/calculator_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Phat Le/DataPath/DataPath.srcs/constrs_1/new/calculator_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FPGA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FPGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 878.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 878.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'CU'
+INFO: [Synth 8-5544] ROM "rea" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "we" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rab" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "raa" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/CMPE 125 Lab 7 Small Calculator DP Source Code/CMPE 125 Lab 7 Small Calculator DP Source Code/alu.v:9]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Init |                        000000001 |                             0000
+                      W1 |                        000000010 |                             0001
+                      W2 |                        000000100 |                             0010
+                    Wait |                        000001000 |                             0011
+                   addOP |                        000010000 |                             0100
+                   minOP |                        000100000 |                             0101
+                   andOP |                        001000000 |                             0110
+                   xorOP |                        010000000 |                             0111
+                     out |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'CU'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 4     
+	   9 Input      2 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module button_debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module CU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 2     
+Module mux4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module register_file 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module binary2bcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module led_mux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     12 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------+-----------+----------------------+--------------+
+|FPGA        | calculator/DP/RF/RegFile_reg | Implied   | 4 x 4                | RAM32M x 2   | 
++------------+------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 878.227 ; gain = 354.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 880.984 ; gain = 356.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------+-----------+----------------------+--------------+
+|FPGA        | calculator/DP/RF/RegFile_reg | Implied   | 4 x 4                | RAM32M x 2   | 
++------------+------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 880.984 ; gain = 356.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT2   |     8|
+|5     |LUT3   |     7|
+|6     |LUT4   |    12|
+|7     |LUT5   |    19|
+|8     |LUT6   |    38|
+|9     |RAM32M |     2|
+|10    |FDRE   |    61|
+|11    |IBUF   |    14|
+|12    |OBUF   |    13|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+--------------------+------+
+|      |Instance     |Module              |Cells |
++------+-------------+--------------------+------+
+|1     |top          |                    |   184|
+|2     |  LED        |led_mux             |     9|
+|3     |  calculator |calculatorFPGA      |    71|
+|4     |    DP       |small_calculator_dp |     3|
+|5     |      RF     |register_file       |     3|
+|6     |    cu       |CU                  |    68|
+|7     |  clk        |clk_gen             |    56|
+|8     |  clk_button |button_debouncer    |    20|
++------+-------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 893.672 ; gain = 256.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 893.672 ; gain = 369.660
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 907.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 907.586 ; gain = 617.582
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 907.586 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Phat Le/DataPath/DataPath.runs/synth_1/FPGA.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FPGA_utilization_synth.rpt -pb FPGA_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 15:18:07 2019...

@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Phat Le/Downloads/basys3_utility_modules/basys3_utility_modules/bcd_to_7seg.v,1529896794,verilog,,C:/Users/Phat Le/Downloads/basys3_utility_modules/basys3_utility_modules/clk_gen.v,,bcd_to_7seg,,,,,,,,
+C:/Users/Phat Le/Downloads/basys3_utility_modules/basys3_utility_modules/clk_gen.v,1529896827,verilog,,C:/Users/Phat Le/Downloads/basys3_utility_modules/basys3_utility_modules/led_mux.v,,clk_gen,,,,,,,,
+C:/Users/Phat Le/Downloads/basys3_utility_modules/basys3_utility_modules/led_mux.v,1529895567,verilog,,C:/Users/Phat Le/Downloads/lab2_voting_machine/lab2_voting_machine/sources/voting_rule.v,,led_mux,,,,,,,,
+C:/Users/Phat Le/Downloads/lab2_voting_machine/lab2_voting_machine/sources/voting_machine_fpga.v,1529891995,verilog,,,,voting_machine_fpga,,,,,,,,
+C:/Users/Phat Le/Downloads/lab2_voting_machine/lab2_voting_machine/sources/voting_rule.v,1529892043,verilog,,C:/Users/Phat Le/Downloads/lab2_voting_machine/lab2_voting_machine/testbenches/tb_voting_rule.v,,voting_rule,,,,,,,,
+C:/Users/Phat Le/Downloads/lab2_voting_machine/lab2_voting_machine/testbenches/tb_voting_rule.v,1529892067,verilog,,,,tb_voting_rule,,,,,,,,
+C:/Users/Phat Le/voting_machine/voting_machine.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,

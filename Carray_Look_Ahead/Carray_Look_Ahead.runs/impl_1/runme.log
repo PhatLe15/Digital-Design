@@ -1,0 +1,67 @@
+
+*** Running vivado
+    with args -log carry_look_ahead_fpga.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source carry_look_ahead_fpga.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source carry_look_ahead_fpga.tcl -notrace
+Command: link_design -top carry_look_ahead_fpga -part xc7k70tfbv676-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: 'U18' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:6]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V17' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V16' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:10]
+CRITICAL WARNING: [Common 17-69] Command failed: 'W16' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:11]
+CRITICAL WARNING: [Common 17-69] Command failed: 'W17' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:12]
+CRITICAL WARNING: [Common 17-69] Command failed: 'W2' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:13]
+CRITICAL WARNING: [Common 17-69] Command failed: 'T1' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:15]
+CRITICAL WARNING: [Common 17-69] Command failed: 'R2' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:16]
+CRITICAL WARNING: [Common 17-69] Command failed: 'E19' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:20]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V19' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:22]
+CRITICAL WARNING: [Common 17-69] Command failed: 'P3' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:24]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:25]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:26]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L1' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:27]
+CRITICAL WARNING: [Common 17-69] Command failed: 'U3' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:28]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V13' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:29]
+CRITICAL WARNING: [Common 17-69] Command failed: 'W7' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:32]
+CRITICAL WARNING: [Common 17-69] Command failed: 'U8' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:34]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V5' is not a valid site or package pin name. [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc:37]
+Finished Parsing XDC File [C:/Users/Phat Le/Desktop/Fall2019/CMPE125/carry_look_ahead_fpga1.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 648.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 19 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 652.762 ; gain = 361.801
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net c_i_led_OBUF has multiple drivers: c_i_led_OBUF_inst_i_1/O, and c_in_IBUF_inst/O.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 671.695 ; gain = 18.934
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 19 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 30 17:32:43 2019...

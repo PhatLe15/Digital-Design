@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+87 true C:/Users/Phat Le/Register_File/Register_File.srcs/sim_1/new/registers_tb.v

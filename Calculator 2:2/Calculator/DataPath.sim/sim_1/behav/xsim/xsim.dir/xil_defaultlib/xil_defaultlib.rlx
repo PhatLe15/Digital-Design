@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/phatle/Downloads/backup/DataPath/DataPath.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sim_1/new/cal_tb.v,1572895076,verilog,,,,cal_tb,,,,,,,,
+C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sources_1/imports/CMPE 125 Lab 7 Small Calculator DP Source Code/small_calculator_dp.v,1573638093,verilog,,C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sim_1/new/cal_tb.v,,small_calculator_dp,,,,,,,,
+C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sources_1/new/CU.v,1572569778,verilog,,C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sources_1/new/calculatorFPGA.v,,CU,,,,,,,,
+C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sources_1/new/calculatorFPGA.v,1572391226,verilog,,C:/Users/phatle/Downloads/backup/DataPath/DataPath.srcs/sources_1/imports/CMPE 125 Lab 7 Small Calculator DP Source Code/small_calculator_dp.v,,calculatorFPGA,,,,,,,,

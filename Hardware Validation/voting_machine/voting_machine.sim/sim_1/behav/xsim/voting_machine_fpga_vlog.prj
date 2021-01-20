@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Downloads/basys3_utility_modules/basys3_utility_modules/bcd_to_7seg.v" \
+"../../../../../Downloads/basys3_utility_modules/basys3_utility_modules/clk_gen.v" \
+"../../../../../Downloads/basys3_utility_modules/basys3_utility_modules/led_mux.v" \
+"../../../../../Downloads/lab2_voting_machine/lab2_voting_machine/sources/voting_rule.v" \
+"../../../../../Downloads/lab2_voting_machine/lab2_voting_machine/sources/voting_machine_fpga.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

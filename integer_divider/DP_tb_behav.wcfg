@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="integer_divider_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="integer_divider_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="65096834fs"></ZoomStartTime>
+      <ZoomEndTime time="210180634fs"></ZoomEndTime>
+      <Cursor1Time time="186000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/integer_divider_tb/x_tb" type="array">
+      <obj_property name="ElementShortName">x_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">x_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/y_tb" type="array">
+      <obj_property name="ElementShortName">y_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/go_tb" type="logic">
+      <obj_property name="ElementShortName">go_tb</obj_property>
+      <obj_property name="ObjectShortName">go_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/rst_tb" type="logic">
+      <obj_property name="ElementShortName">rst_tb</obj_property>
+      <obj_property name="ObjectShortName">rst_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/clk_tb" type="logic">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/Done_tb" type="logic">
+      <obj_property name="ElementShortName">Done_tb</obj_property>
+      <obj_property name="ObjectShortName">Done_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/Err_tb" type="logic">
+      <obj_property name="ElementShortName">Err_tb</obj_property>
+      <obj_property name="ObjectShortName">Err_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/quotient_tb" type="array">
+      <obj_property name="ElementShortName">quotient_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">quotient_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/remainder_tb" type="array">
+      <obj_property name="ElementShortName">remainder_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">remainder_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/quotient_expected" type="array">
+      <obj_property name="ElementShortName">quotient_expected[3:0]</obj_property>
+      <obj_property name="ObjectShortName">quotient_expected[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/integer_divider_tb/remainder_expected" type="array">
+      <obj_property name="ElementShortName">remainder_expected[3:0]</obj_property>
+      <obj_property name="ObjectShortName">remainder_expected[3:0]</obj_property>
+   </wvobject>
+</wave_config>

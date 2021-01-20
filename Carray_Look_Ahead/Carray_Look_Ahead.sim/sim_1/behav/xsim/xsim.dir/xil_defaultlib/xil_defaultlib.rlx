@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sim_1/new/CLA_adder_tb.v,1570227580,verilog,,,,CLA_adder_tb,,,,,,,,
+C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sources_1/new/CLA_adder_top.v,1569874631,verilog,,C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sources_1/new/XOR2.v,,CLA_adder_top,,,,,,,,
+C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sources_1/new/XOR2.v,1569874410,verilog,,C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sources_1/new/half_adder.v,,XOR2,,,,,,,,
+C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sources_1/new/half_adder.v,1569874334,verilog,,C:/Users/Phat Le/Carray_Look_Ahead/Carray_Look_Ahead.srcs/sim_1/new/CLA_adder_tb.v,,half_adder,,,,,,,,

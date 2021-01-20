@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FIFO.srcs/sources_1/new/FIFO.v" \
+"../../../../../Desktop/Fall2019/CMPE125/basys3_utility_modules/basys3_utility_modules/button_debouncer.v" \
+"../../../../../Desktop/Fall2019/CMPE125/basys3_utility_modules/basys3_utility_modules/clk_gen.v" \
+"../../../../FIFO.srcs/sources_1/new/FIFO_FPGA.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

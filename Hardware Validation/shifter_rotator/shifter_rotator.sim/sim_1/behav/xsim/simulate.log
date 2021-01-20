@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+No Errors. Test was successful.
+$stop called at time : 128 ns : File "C:/Users/Phat Le/shifter_rotator/shifter_rotator.srcs/sim_1/new/tb_shift_rotator.v" Line 48

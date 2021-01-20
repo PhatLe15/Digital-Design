@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 18 11:07:46 2019
+# Process ID: 992
+# Current directory: C:/Users/phatle/Downloads/backup/integer_divider/integer_divider.runs/impl_1
+# Command line: vivado.exe -log integer_divider_FPGA.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source integer_divider_FPGA.tcl -notrace
+# Log file: C:/Users/phatle/Downloads/backup/integer_divider/integer_divider.runs/impl_1/integer_divider_FPGA.vdi
+# Journal file: C:/Users/phatle/Downloads/backup/integer_divider/integer_divider.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source integer_divider_FPGA.tcl -notrace

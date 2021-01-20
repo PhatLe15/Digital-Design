@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Test finished with 0 errors
+$finish called at time : 2570 ns : File "C:/Users/Phat Le/parallel_unsigned_integer_multiplier/parallel_unsigned_integer_multiplier.srcs/sim_1/new/unsigned_integer_multiplier_tb.v" Line 52
