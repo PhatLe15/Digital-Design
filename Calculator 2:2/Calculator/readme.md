@@ -372,7 +372,7 @@ endmodule
 
 # alu.v
 
-```
+```v
 module alu (
 input wire [1:0] c,
 input wire [3:0] in0,
