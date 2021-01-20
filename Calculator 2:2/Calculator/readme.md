@@ -10,9 +10,8 @@ small calculator system that requires a Control Unit to control signals of a sim
 
 # Table 1: List of modules for Task 1
 | Module   |      Function      |
-|:----------:|:-------------:|
-
-| small_calculator_dp | This is the top-level module of the data-path which connects four modules below. 
+|:-------------------:|:--------------------------------------------------------------------------------:|
+| small_calculator_dp | This is the top-level module of the data-path which connects four modules below. |
 | mux4 |  This module selects the kind of inputs to go into the system such as input1(in1), input2(in2), and the result.|
 | register_file |  This module receives the selected input from the mux4 module and stores it in the register file. After it stored input1 and 2 in the register, the module would read both inputs at outputs raa and rab so the alu can process the result. The result from the two inputs then is stored at the register file and being read out from both output raa and rab.|
 | alu |  This module selects the appropriate operations based on the outputs from the register_file module. When the register file read outputs are the data from input 1 and 2, the alu would generate the result based on the operation selection(+,-,&,^). When the register file read outputs are the same value of the result, the alu module then selects and operation(&) to pass the result to the mux module below. |
