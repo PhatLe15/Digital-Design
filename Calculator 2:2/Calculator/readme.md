@@ -60,8 +60,8 @@ The second task of the lab is to design, functionally verify the control unit (C
 
 # calculator_constraints This module set the FPGA pin constraints based on the input/output arrangement specified in the lab instruction.
 
-
-# Figure 1: ASM chart describing the Control Unit system’s cycle by cycle
+![wsadf](https://lh5.googleusercontent.com/5X138AMQ9yNfgRAefcg4IqgnaoN4x5kJQNJ4kRrFvgE9M8F6erfkFIKixPdzeCk-HRgDo--mbSGC5bPAN-ocA-rbiV-KIy2Xx66zJH4cpW0jmvhP0arh9bcUM6XS5_KtLrWMQTE)
+*Figure 1: ASM chart describing the Control Unit system’s cycle by cycle
 
 # Figure 2: State transition diagram extracted from the ASM chart above
 
