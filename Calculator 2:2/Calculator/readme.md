@@ -9,79 +9,17 @@ small calculator system that requires a Control Unit to control signals of a sim
   The first task is to functionally verify the provided module named Data Path(DP). The DP is the top-level module that connects a 4 to 1 mux, a register file, an alu, and a 2 to 1 mux. Its main functionality is to take in two 4-bit inputs and store them in the register file cycle by cycle. The DP then performs the operation based on a control signal (+,-,&,^) and store the result in the register file for the next clock cycle. Lastly, it outputs the result by another clock cycle.
 
 # Table 1: List of modules for Task 1
+| Module   |      Function      |
+|:----------:|:-------------:|
 
-# Module Function
+| small_calculator_dp |  This is the top-level module of the data-path which connects four modules below.|
+| mux4 |  This module selects the kind of inputs to go into the system such as input1(in1), input2(in2), and the result.|
+| register_file |  This module receives the selected input from the mux4 module and stores it in the register file. After it stored input1 and 2 in the register, the module would read both inputs at outputs raa and rab so the alu can process the result. The result from the two inputs then is stored at the register file and being read out from both output raa and rab.|
+| alu |  This module selects the appropriate operations based on the outputs from the register_file module. When the register file read outputs are the data from input 1 and 2, the alu would generate the result based on the operation selection(+,-,&,^). When the register file read outputs are the same value of the result, the alu module then selects and operation(&) to pass the result to the mux module below. |
+| mux2 |  This module only selects the final result passing by the alu module. It then outputs the result and reaches the end of the data path. |
+| small_calculator_dp_tb |  This module manually decides the appropriate inputs for the DataPath module and verify whether the functionality of the DataPath is correct. |
 
-# small_calculator_dp This is the top-level module of the data-path
-
-# which connects four modules below.
-
-# mux4 This module selects the kind of inputs to go
-
-# into the system such as input1(in1),
-
-# input2(in2), and the result.
-
-# register_file This module receives the selected input from
-
-# the mux4 module and stores it in the register
-
-# file. After it stored input1 and 2 in the
-
-# register, the module would read both inputs at
-
-# outputs raa and rab so the alu can process the
-
-# result. The result from the two inputs then is
-
-# stored at the register file and being read out
-
-# from both output raa and rab.
-
-# alu This module selects the appropriate
-
-# operations based on the outputs from the
-
-# register_file module. When the register file
-
-# read outputs are the data from input 1 and 2,
-
-# the alu would generate the result based on the
-
-# operation selection(+,-,&,^). When the
-
-# register file read outputs are the same value of
-
-# the result, the alu module then selects and
-
-# operation(&) to pass the result to the mux
-
-# module below.
-
-
-# mux2 This module only selects the final result
-
-# passing by the alu module. It then outputs the
-
-# result and reaches the end of the data path.
-
-# small_calculator_dp_tb This module manually decides the appropriate
-
-# inputs for the DataPath module and verify
-
-# whether the functionality of the DataPath is
-
-# correct.
-
-# The second task of the lab is to design, functionally verify the control unit (CU) which is a finite
-
-# state machine (FSM). The functionality of this control unit is to provide proper output signals for
-
-# the input controls of the data path module based on the 2-bit operation selection input(+,-,&,^) ,
-
-# the begin signal is toggled (go input). Furthermore, the CU would output the current state and
-
-# turn ON the done signal(1) in the last state.
+The second task of the lab is to design, functionally verify the control unit (CU) which is a finite state machine (FSM). The functionality of this control unit is to provide proper output signals for the input controls of the data path module based on the 2-bit operation selection input(+,-,&,^) ,the begin signal is toggled (go input). Furthermore, the CU would output the current state and turn ON the done signal(1) in the last state.
 
 # Table 2 : List of module for task 2
 
@@ -317,13 +255,13 @@ small calculator system that requires a Control Unit to control signals of a sim
 
 # Appendix
 
-# a. Source Code
+## a. Source Code
 
-# Task 1
+### Task 1
 
-# small_calculator_dp.v
+#### small_calculator_dp.v
 
-```
+```v
 module small_calculator_dp (
 input wire clk,
 input wire [3:0] in1,
@@ -367,9 +305,7 @@ register_file RF (
 );
 alu ALU (
 .c (c),
-```
-
-**.in0 (douta),
+.in0 (douta),
 .in1 (doutb),
 .alu_out (aluout)
 );
@@ -381,9 +317,10 @@ mux2 #(
 .in1 (aluout),
 .out (out)
 );
-endmodule**
+endmodule
+```
 
-# mux4.v
+#### mux4.v
 
 ```
 module mux4 #(parameter WIDTH = 4) (
@@ -404,10 +341,11 @@ endcase
 end
 endmodule
 ```
-# register_file.v
 
+#### register_file.v
 
-**module register_file (
+```v
+module register_file (
 input wire clk,
 input wire rea,
 input wire reb,
@@ -430,11 +368,13 @@ end
 end
 assign douta = (rea == 1'b1)? RegFile[raa] : 4'b0;// when a is enable
 assign doutb = (reb == 1'b1)? RegFile[rab] : 4'b0;//when b is enable
-endmodule**
+endmodule
+```
 
 # alu.v
 
-**module alu (
+```
+module alu (
 input wire [1:0] c,
 input wire [3:0] in0,
 input wire [3:0] in1,
@@ -448,19 +388,21 @@ case(c)
 2'b11: alu_out = in0 ^ in1;
 endcase
 end
-endmodule**
+endmodule
+```
 
 # mux2.v
 
-
-**module mux2 #(WIDTH = 4) (
+```v
+module mux2 #(WIDTH = 4) (
 input wire sel,
 input wire [WIDTH-1:0] in0,
 input wire [WIDTH-1:0] in1,
 output wire [WIDTH-1:0] out
 );
 assign out = (sel == 1'b1)? in1 : in0;
-endmodule**
+endmodule
+```
 
 # small_calculator_dp_tb.v
 
