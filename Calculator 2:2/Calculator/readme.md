@@ -280,9 +280,7 @@ wire [3:0] mux1out;
 wire [3:0] douta;
 wire [3:0] doutb;
 wire [3:0] aluout;
-mux4 #(
-.WIDTH(4)
-) MUX1 (
+mux4 #(.WIDTH(4)) MUX1 (
 .sel (s1),
 .in0 (4'b0),
 .in1 (in1),
@@ -308,9 +306,7 @@ alu ALU (
 .in1 (doutb),
 .alu_out (aluout)
 );
-mux2 #(
-.WIDTH(4)
-) MUX2 (
+mux2 #(.WIDTH(4)) MUX2 (
 .sel (s2),
 .in0 (4'b0),
 .in1 (aluout),
