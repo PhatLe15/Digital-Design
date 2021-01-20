@@ -53,10 +53,12 @@ The second task of the lab is to design, functionally verify the control unit (C
 *Figure 1: ASM chart describing the Control Unit system’s cycle by cycle*
 
 ![sdf](https://lh3.googleusercontent.com/G_UsiZrtlaYbWU20GwHafOfpeKGrF5cxefldBB0sliIi9b54I4T4YqajxNYLJ5VITIubFqxOSNCyueks3koFY6qCjHE2h0YA80p9t2v12xP_vBjNQD_zR7jjr1uaZW_zqBACUro)
+
 *Figure 2: State transition diagram extracted from the ASM chart above*
 
-
 *Table 5: Output Logic of the FSM extracted from the ASM chart above*
+
+![sdf](https://lh3.googleusercontent.com/dKTfEMSVudbGywamEyaSDrxXaBri27bWAxf12JTtTx1iQyPwgXqd4AOLzUCPlrQriR_sNO6LS4yxZmBBVtZvrwBTPmrYuMTjSNHKISC48Yqk3sgGrGIL0X6FeSU70Q)
 
 # Input Outputs
 
