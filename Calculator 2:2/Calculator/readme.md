@@ -180,7 +180,7 @@ endmodule
 
 #### mux4.v
 
-```
+```v
 module mux4 #(parameter WIDTH = 4) (
 input wire [1:0] sel,
 input wire [WIDTH-1:0] in0,
