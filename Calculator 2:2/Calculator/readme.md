@@ -61,43 +61,45 @@ The second task of the lab is to design, functionally verify the control unit (C
 # calculator_constraints This module set the FPGA pin constraints based on the input/output arrangement specified in the lab instruction.
 
 ![wsadf](https://lh5.googleusercontent.com/5X138AMQ9yNfgRAefcg4IqgnaoN4x5kJQNJ4kRrFvgE9M8F6erfkFIKixPdzeCk-HRgDo--mbSGC5bPAN-ocA-rbiV-KIy2Xx66zJH4cpW0jmvhP0arh9bcUM6XS5_KtLrWMQTE)
-*Figure 1: ASM chart describing the Control Unit system’s cycle by cycle
+*Figure 1: ASM chart describing the Control Unit system’s cycle by cycle*
 
-# Figure 2: State transition diagram extracted from the ASM chart above
+![sdf](https://lh3.googleusercontent.com/G_UsiZrtlaYbWU20GwHafOfpeKGrF5cxefldBB0sliIi9b54I4T4YqajxNYLJ5VITIubFqxOSNCyueks3koFY6qCjHE2h0YA80p9t2v12xP_vBjNQD_zR7jjr1uaZW_zqBACUro)
+*Figure 2: State transition diagram extracted from the ASM chart above*
 
 
-## Table 5: Output Logic of the FSM extracted from the ASM chart above
+*Table 5: Output Logic of the FSM extracted from the ASM chart above*
 
 # Input Outputs
 
+![sadf](https://lh4.googleusercontent.com/ofXyZ8hGbNeruCQKweemS3WlSi47DfOd6ZWJIgoxY9VEqo8CggOggIO319je62l2n5it6BYVWrISA8S9IW3Et79kOIVeszpYeOcAIgp9ze5YP7wdEt1yfk0S8o4IQxUWZLPX0L8)
+*Figure 3: Block diagram for Task*
 
-   - Figure 3: Block diagram for Task
+![asd](https://lh4.googleusercontent.com/plVx1Ys3iowQD10PCt-IlTfQHidTUVU-TdZYROn8l54LyKr2I1rPPSECxguQb-SsKXRrNV9D9bDl3FEMQhClFpIrtgZQVlC2PKJs6z9UggJ7yXpzT5QIeP_gNDdlWv9aVvwQELs)
+*Figure 4:Block diagram for Task 2*
 
-
-# Figure 4:Block diagram for Task 2
-
-# Figure 5:Block diagram for Task 2
+![](https://lh4.googleusercontent.com/wT_77PSzuMMNejoe0TZpZvJzp2hnbY_s3XEPrOQ1Y5yq4b9lvGai4dcAWepVvpaIvw1PKtQ-5OBkriw1o2rbsy89J6acX2nZSccpHWyF0cUjwueIBBWt4CtWkzJYnh285LifTIc)
+*Figure 5:Block diagram for Task 2*
 
 # Simulation Result
 
 # Task 1
 
-
-# Figure 6: Simulation waveforms produced from Task 1
+![]wer(https://lh6.googleusercontent.com/ccb3k-Zzd-QjctPDaDJVzXt_IXc64eQKcu9U6bFPDFyVC908JcdyEHKoHgTf6EjDxFrSWnITDVXXcStOFOSrXZuTEe2jPYAuewVLct2kOd2J-Lo5O9gyLOChIJb-58I29bPBVWI)
+*Figure 6: Simulation waveforms produced from Task 1*
 
   The testbench for this task would randomly generate 4 combinations of inputs in1 and in2. For each of the input combination, In the first clock cycle, the testbench first store the in1 to the register by setting s1_tb=01, we_tb=1, wa_tb = 01. Then, setting s1=10, wa_tb = 10 to store in data to the register for the next clock cycle. The register module then read out both data inputs by setting raa_tb=01, rea_tb=10, rea_tb=1, and reb_tb=1. To get the result, the two read inputs then go through the alu. Based on the input operation given by op_tb, the alu produces the result. In this case, our testbench went through all possible operations from addition(op_tb =00), subtraction(op_tb =01), and(op_tb =10), xor(op_tb =11). Every time the result received by an operation, it is stored in the register by setting s1_tb=11, wa_tb=11 in a clock cycle. Lastly, we output the result by reading out the same address rea_tb =11, rea_tb =11, set the alu operation to and(10), and s2=1 in another clock cycle. For instance, the first input was 4(in1_tb), the second input was 1(in1_tb). The first two clock cycles were to write them to the register. In the for loop of incrementing operation, the output became 5(4+1), 4-1(3), 0(4&1), 5(4^0) which was as expected. For this reason, the simulation verification was successful.
 
 
 # Task 2
-
-# Figure 7: Simulation waveforms produced from Task 2
+![sdf](https://lh4.googleusercontent.com/PC6XtMDqmJp94DGOPqq3scdSZIRiaBayNqd5liGVtvihX-AXQfZH0U1LNviSHFFSI7cWw79vh3SRenGPCD8E19F4ilXAZduOoqMYR88O8AMRP4Y7IPejJdTAnHi3iuFwPTckVEo)
+*Figure 7: Simulation waveforms produced from Task 2*
 
   The testbench for this task would go through all possible operation(op_tb from 00 to 11) and have go_tb input signal that always turn high (1) to make the system always go to the next state without interruption from one operation to another. In each of the operation, the testbench would clock 6 times to go from state 0 to state 8. According to Figure 7 , the output for each state was then compared to the Output Logic table observed in Table 2 above. Since the simulated outputs matched the expected outputs in Table2, the functional verification process for this task was successful.
 
 # Task 3
 
-
-# Figure 8: Simulation waveforms produced from Task 3
+![sdf](https://lh5.googleusercontent.com/XggltCv3elLWoYuEfgB8w--7SwuC2mAEdcjDdqFb5Rt-lVIkWA1PIr8imMw_T6t2gseynwrB1LZCeFXbXwH-Kj5on3Xl8cfxlaKNRcNDF4L29yqPiRf7LC5Do_19Wl9Ny-GAx-k)
+ *Figure 8: Simulation waveforms produced from Task 3*
 
   Similar to the above tasks, this testbench go through four random combinations of inputs (in1_tb&in2_tb), and all possible input operations(op_tb) for each input combination (in1_tb&in2_tb). Each of the operation also clocked 6 times to go from s0 to s8 state. Since this is a self-checking testbench, it included an expected output (out_expected) to compare with the actual output (out_tb). A variable called errors would increment by 1 if the expected output is not equal to the simulated output. According to Figure 8, the expected value (out_expected) matched the actual value(out_tb), and the errors count was 0. Therefore, the simulated verification process was successful.
 
@@ -105,8 +107,8 @@ The second task of the lab is to design, functionally verify the control unit (C
 
   For the FPGA validation process, the rightmost 4 switches are 4-bit input in1, the leftmost 4 switches are 4bit in2. The middle 2 switches are 2-bit input op(purple). The center button is the clock(yellow), the left button is reset input(green), and the right button is go input(red). Since there are only eight states, the current state output signal (CS) only need one seven segment LED which is on the left. The 4-bit output(out) need two seven segment LED on the right. According to Figure 9, in1 was 0111(7), in2 was 0101(5), and selecting subtraction operation (op=01). The device clocked 6 times after go button was pressed. The result at the last state(s8) was correct since 7-5 is 2. We also randomly tested other input cases and the result also as expected. For this reason, the FPGA validation process was successful.
 
-
-# Figure 9: inputs and outputs layout for the FPGA validation process of task 4.
+![sdaf](https://lh6.googleusercontent.com/ykOzp4pOqhkWFnnUyS_BTspVV6sK5QVu8iV-iWVm8KB2yu9EI_X1PCAYlViAQhBGQ3KvKT8NG2LEX4GdCpxSoR45xl_NadFfQU1TCPFX8xy35ukSY8FJn3hTWyZYk2EQRtVw9pI)
+*Figure 9: inputs and outputs layout for the FPGA validation process of task 4.*
 
 # Conclusion
 
