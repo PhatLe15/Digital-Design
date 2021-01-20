@@ -280,6 +280,7 @@ wire [3:0] mux1out;
 wire [3:0] douta;
 wire [3:0] doutb;
 wire [3:0] aluout;
+
 mux4 #(.WIDTH(4)) MUX1 (
 .sel (s1),
 .in0 (4'b0),
@@ -288,6 +289,7 @@ mux4 #(.WIDTH(4)) MUX1 (
 .in3 (aluout),
 .out (mux1out)
 );
+
 register_file RF (
 .clk (clk),
 .rea (rea),
