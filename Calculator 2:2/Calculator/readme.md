@@ -21,93 +21,44 @@ small calculator system that requires a Control Unit to control signals of a sim
 The second task of the lab is to design, functionally verify the control unit (CU) which is a finite state machine (FSM). The functionality of this control unit is to provide proper output signals for the input controls of the data path module based on the 2-bit operation selection input(+,-,&,^) ,the begin signal is toggled (go input). Furthermore, the CU would output the current state and turn ON the done signal(1) in the last state.
 
 # Table 2 : List of module for task 2
+| Module  |      Function      |
+|:-------------------:|:---------------------------------------------------------------------------------------------------:|
+|cu|This is control unit module. It acts like a controller which is pass control signal to the datapath based on each stage.|
+|cu_tb|This is the testbench module which tests all possible operation inputs for the same amount of clock toggle transitional state.|
 
-# Module Function
 
-# cu This is control unit module. It acts like a
-
-# controller which is pass control signal to the
-
-# datapath based on each stage.
-
-# cu_tb This is the testbench module which tests all
-
-# possible operation inputs for the same amount
-
-# of clock toggle transitional state.
-
-# The third task is to connect the DP and CU module by creating another module call calculator
-
-# and further functionally verify it. Similar to the input of task 1 and 2, this task provides the same
-
-# amount of clock cycle and proper inputs to the top level module which would receive only the
-
-# final result of the operation, the current state(CS), and the finished signal (done) at the end of the
-
-# state.
+  The third task is to connect the DP and CU module by creating another module call calculator and further functionally verify it. Similar to the input of task 1 and 2, this task provides the same amount of clock cycle and proper inputs to the top level module which would receive only the final result of the operation, the current state(CS), and the finished signal (done) at the end of the state.
 
 # Table 3: List of module for task 3
+| Module  |      Function      |
+|:-------------------:|:---------------------------------------------------------------------------------------------------:|
+|calculator|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
+|calculator_tb|This is calculator techbench module. This module will test all the possibility case in calculator module with random input numbers (in1 & in2).|
 
-# Module Function
-
-# calculator This is a top-level module of calculator. It
-
-# will contain both control-unit module and
-
-# datapath module.
-
-# calculator_tb This is calculator techbench module. This
-
-# module will test all the possibility case in
-
-# calculator module with random input numbers
-
-# (in1 & in2).
-
-
-# The fourth task is hardware validation the small calculator machine. The clock for this module is
-
-# a debounce button. The inputs in, in2, op are DIP switches. The current state(CS) and the output
-
-# result(out) are the seven-segment LED.
+  The fourth task is hardware validation the small calculator machine. The clock for this module is a debounce button. The inputs in, in2, op are DIP switches. The current state(CS) and the output result(out) are the seven-segment LED.
 
 # Table 4: List of module for task 4
-
+| Module  |      Function      |
+|:-------------------:|:---------------------------------------------------------------------------------------------------:|
+|calculator|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
+|calculator_tb|This is calculator techbench module. This module will test all the possibility case in calculator module with random input numbers (in1 & in2).|
 # Module Function
 
-# calculator_FPGA This is the top-level FPGA harward module
+# calculator_FPGA This is the top-level FPGA harward module that connects all the necessary module for input switches, buttons, and LEDs.
 
-# that connects all the necessary module for
-
-# input switches, buttons, and LEDs.
-
-# binary2bcd This module converts the output result (out)
-
-# from binary to bcd as ones and tenths value
-
-# since the maximum result value is 15.
+# binary2bcd This module converts the output result (out) from binary to bcd as ones and tenths value since the maximum result value is 15.
 
 # button_debouncer This module acts as the clock control input
 
-# clk_gen This module produce 5kHz clock signal for
-
-# the button_debouncer module.
+# clk_gen This module produce 5kHz clock signal for the button_debouncer module.
 
 # led_mux This module is taking place in the output of
 
-# bcd_to_7seg. This module is select the chosen
+# bcd_to_7seg. This module is select the chosen LED to activate.
 
-# LED to activate.
+# bcd_to_7seg This is a decoder module which is convert 4-bit input to 8-pit output.
 
-# bcd_to_7seg This is a decoder module which is convert
-
-# 4-bit input to 8-pit output.
-
-# calculator_constraints This module set the FPGA pin constraints
-
-# based on the input/output arrangement
-
-# specified in the lab instruction.
+# calculator_constraints This module set the FPGA pin constraints based on the input/output arrangement specified in the lab instruction.
 
 
 # Figure 1: ASM chart describing the Control Unit system’s cycle by cycle
@@ -119,15 +70,7 @@ The second task of the lab is to design, functionally verify the control unit (C
 
 # Input Outputs
 
-- S0 Init CS Input name s1 wa we raa rea rab reb c s2 done
-- S1 W1
-- S2 W2
-- S3 Wait
-- S4 addOP
-- S5 minOP
-- S6 andOP
-- S7 xorOP
-- S8 out
+
    - Figure 3: Block diagram for Task
 
 
@@ -142,114 +85,32 @@ The second task of the lab is to design, functionally verify the control unit (C
 
 # Figure 6: Simulation waveforms produced from Task 1
 
-# The testbench for this task would randomly generate 4 combinations of inputs in1 and in2. For
-
-# each of the input combination, In the first clock cycle, the testbench first store the in1 to the
-
-# register by setting s1_tb=01, we_tb=1, wa_tb = 01. Then, setting s1=10, wa_tb = 10 to store in
-
-# data to the register for the next clock cycle. The register module then read out both data inputs by
-
-# setting raa_tb=01, rea_tb=10, rea_tb=1, and reb_tb=1. To get the result, the two read inputs then
-
-# go through the alu. Based on the input operation given by op_tb, the alu produces the result. In
-
-# this case, our testbench went through all possible operations from addition(op_tb =00),
-
-# subtraction(op_tb =01), and(op_tb =10), xor(op_tb =11). Every time the result received by an
-
-# operation, it is stored in the register by setting s1_tb=11, wa_tb=11 in a clock cycle. Lastly, we
-
-# output the result by reading out the same address rea_tb =11, rea_tb =11, set the alu operation to
-
-# and(10), and s2=1 in another clock cycle. For instance, the first input was 4(in1_tb), the second
-
-# input was 1(in1_tb). The first two clock cycles were to write them to the register. In the for loop
-
-# of incrementing operation, the output became 5(4+1), 4-1(3), 0(4&1), 5(4^0) which was as
-
-# expected. For this reason, the simulation verification was successful.
+  The testbench for this task would randomly generate 4 combinations of inputs in1 and in2. For each of the input combination, In the first clock cycle, the testbench first store the in1 to the register by setting s1_tb=01, we_tb=1, wa_tb = 01. Then, setting s1=10, wa_tb = 10 to store in data to the register for the next clock cycle. The register module then read out both data inputs by setting raa_tb=01, rea_tb=10, rea_tb=1, and reb_tb=1. To get the result, the two read inputs then go through the alu. Based on the input operation given by op_tb, the alu produces the result. In this case, our testbench went through all possible operations from addition(op_tb =00), subtraction(op_tb =01), and(op_tb =10), xor(op_tb =11). Every time the result received by an operation, it is stored in the register by setting s1_tb=11, wa_tb=11 in a clock cycle. Lastly, we output the result by reading out the same address rea_tb =11, rea_tb =11, set the alu operation to and(10), and s2=1 in another clock cycle. For instance, the first input was 4(in1_tb), the second input was 1(in1_tb). The first two clock cycles were to write them to the register. In the for loop of incrementing operation, the output became 5(4+1), 4-1(3), 0(4&1), 5(4^0) which was as expected. For this reason, the simulation verification was successful.
 
 
 # Task 2
 
 # Figure 7: Simulation waveforms produced from Task 2
 
-# The testbench for this task would go through all possible operation(op_tb from 00 to 11) and
-
-# have go_tb input signal that always turn high (1) to make the system always go to the next state
-
-# without interruption from one operation to another. In each of the operation, the testbench would
-
-# clock 6 times to go from state 0 to state 8. According to Figure 7 , the output for each state was
-
-# then compared to the Output Logic table observed in Table 2 above. Since the simulated outputs
-
-# matched the expected outputs in Table2, the functional verification process for this task was
-
-# successful.
+  The testbench for this task would go through all possible operation(op_tb from 00 to 11) and have go_tb input signal that always turn high (1) to make the system always go to the next state without interruption from one operation to another. In each of the operation, the testbench would clock 6 times to go from state 0 to state 8. According to Figure 7 , the output for each state was then compared to the Output Logic table observed in Table 2 above. Since the simulated outputs matched the expected outputs in Table2, the functional verification process for this task was successful.
 
 # Task 3
 
 
 # Figure 8: Simulation waveforms produced from Task 3
 
-# Similar to the above tasks, this testbench go through four random combinations of inputs
-
-# (in1_tb&in2_tb), and all possible input operations(op_tb) for each input combination
-
-# (in1_tb&in2_tb). Each of the operation also clocked 6 times to go from s0 to s8 state. Since this
-
-# is a self-checking testbench, it included an expected output (out_expected) to compare with the
-
-# actual output (out_tb). A variable called errors would increment by 1 if the expected output is not
-
-# equal to the simulated output. According to Figure 8, the expected value (out_expected) matched
-
-# the actual value(out_tb), and the errors count was 0. Therefore, the simulated verification process
-
-# was successful.
+  Similar to the above tasks, this testbench go through four random combinations of inputs (in1_tb&in2_tb), and all possible input operations(op_tb) for each input combination (in1_tb&in2_tb). Each of the operation also clocked 6 times to go from s0 to s8 state. Since this is a self-checking testbench, it included an expected output (out_expected) to compare with the actual output (out_tb). A variable called errors would increment by 1 if the expected output is not equal to the simulated output. According to Figure 8, the expected value (out_expected) matched the actual value(out_tb), and the errors count was 0. Therefore, the simulated verification process was successful.
 
 # FPGA Validation
 
-# For the FPGA validation process, the rightmost 4 switches are 4-bit input in1, the leftmost 4
-
-# switches are 4bit in2. The middle 2 switches are 2-bit input op(purple). The center button is the
-
-# clock(yellow), the left button is reset input(green), and the right button is go input(red). Since
-
-# there are only eight states, the current state output signal (CS) only need one seven segment LED
-
-# which is on the left. The 4-bit output(out) need two seven segment LED on the right. According
-
-# to Figure 9, in1 was 0111(7), in2 was 0101(5), and selecting subtraction operation (op=01). The
-
-# device clocked 6 times after go button was pressed. The result at the last state(s8) was correct
-
-# since 7-5 is 2. We also randomly tested other input cases and the result also as expected. For this
-
-# reason, the FPGA validation process was successful.
+  For the FPGA validation process, the rightmost 4 switches are 4-bit input in1, the leftmost 4 switches are 4bit in2. The middle 2 switches are 2-bit input op(purple). The center button is the clock(yellow), the left button is reset input(green), and the right button is go input(red). Since there are only eight states, the current state output signal (CS) only need one seven segment LED which is on the left. The 4-bit output(out) need two seven segment LED on the right. According to Figure 9, in1 was 0111(7), in2 was 0101(5), and selecting subtraction operation (op=01). The device clocked 6 times after go button was pressed. The result at the last state(s8) was correct since 7-5 is 2. We also randomly tested other input cases and the result also as expected. For this reason, the FPGA validation process was successful.
 
 
 # Figure 9: inputs and outputs layout for the FPGA validation process of task 4.
 
 # Conclusion
 
-# Overall, both the simulation and FPGA validation process for Task 1 and 2 was successfully
-
-# performed since the result is as expected. This lab experiment helps strengthen our knowledge on
-
-# building finite state machine by creating ASM chart, Output Logic table, and State Transition
-
-# Diagram. We also learn that by functionally verify the data path of any device, we could easily
-
-# come up with the state machine based on the change of input from the data path. One problem
-
-# that we met during the testbench is that we could not find the exact amount of clock cycle in one
-
-# operation. By closely observe the state transitioning, we were able to count the total clock
-
-# between each state and produce the right simulation.
+  Overall, both the simulation and FPGA validation process for Task 1 and 2 was successfully performed since the result is as expected. This lab experiment helps strengthen our knowledge on building finite state machine by creating ASM chart, Output Logic table, and State Transition Diagram. We also learn that by functionally verify the data path of any device, we could easily come up with the state machine based on the change of input from the data path. One problem that we met during the testbench is that we could not find the exact amount of clock cycle in one operation. By closely observe the state transitioning, we were able to count the total clock between each state and produce the right simulation.
 
 
 # Appendix
