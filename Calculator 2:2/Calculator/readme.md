@@ -8,7 +8,7 @@ small calculator system that requires a Control Unit to control signals of a sim
 
   The first task is to functionally verify the provided module named Data Path(DP). The DP is the top-level module that connects a 4 to 1 mux, a register file, an alu, and a 2 to 1 mux. Its main functionality is to take in two 4-bit inputs and store them in the register file cycle by cycle. The DP then performs the operation based on a control signal (+,-,&,^) and store the result in the register file for the next clock cycle. Lastly, it outputs the result by another clock cycle.
 
-** Table 1: List of modules for Task 1**
+**Table 1: List of modules for Task 1**
 | Module   |      Function      |
 |:-------------------:|:--------------------------------------------------------------------------------:|
 | small_calculator_dp | This is the top-level module of the data-path which connects four modules below. |
@@ -20,7 +20,7 @@ small calculator system that requires a Control Unit to control signals of a sim
 
 The second task of the lab is to design, functionally verify the control unit (CU) which is a finite state machine (FSM). The functionality of this control unit is to provide proper output signals for the input controls of the data path module based on the 2-bit operation selection input(+,-,&,^) ,the begin signal is toggled (go input). Furthermore, the CU would output the current state and turn ON the done signal(1) in the last state.
 
-** Table 2 : List of module for task 2**
+**Table 2 : List of module for task 2**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |cu|This is control unit module. It acts like a controller which is pass control signal to the datapath based on each stage.|
@@ -29,7 +29,7 @@ The second task of the lab is to design, functionally verify the control unit (C
 
   The third task is to connect the DP and CU module by creating another module call calculator and further functionally verify it. Similar to the input of task 1 and 2, this task provides the same amount of clock cycle and proper inputs to the top level module which would receive only the final result of the operation, the current state(CS), and the finished signal (done) at the end of the state.
 
-** Table 3: List of module for task 3**
+**Table 3: List of module for task 3**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |calculator|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
@@ -37,7 +37,7 @@ The second task of the lab is to design, functionally verify the control unit (C
 
   The fourth task is hardware validation the small calculator machine. The clock for this module is a debounce button. The inputs in, in2, op are DIP switches. The current state(CS) and the output result(out) are the seven-segment LED.
 
-** Table 4: List of module for task 4**
+**Table 4: List of module for task 4**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |calculator_FPGA|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
