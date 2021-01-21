@@ -8,7 +8,7 @@ small calculator system that requires a Control Unit to control signals of a sim
 
   The first task is to functionally verify the provided module named Data Path(DP). The DP is the top-level module that connects a 4 to 1 mux, a register file, an alu, and a 2 to 1 mux. Its main functionality is to take in two 4-bit inputs and store them in the register file cycle by cycle. The DP then performs the operation based on a control signal (+,-,&,^) and store the result in the register file for the next clock cycle. Lastly, it outputs the result by another clock cycle.
 
-# Table 1: List of modules for Task 1
+** Table 1: List of modules for Task 1**
 | Module   |      Function      |
 |:-------------------:|:--------------------------------------------------------------------------------:|
 | small_calculator_dp | This is the top-level module of the data-path which connects four modules below. |
@@ -20,7 +20,7 @@ small calculator system that requires a Control Unit to control signals of a sim
 
 The second task of the lab is to design, functionally verify the control unit (CU) which is a finite state machine (FSM). The functionality of this control unit is to provide proper output signals for the input controls of the data path module based on the 2-bit operation selection input(+,-,&,^) ,the begin signal is toggled (go input). Furthermore, the CU would output the current state and turn ON the done signal(1) in the last state.
 
-# Table 2 : List of module for task 2
+** Table 2 : List of module for task 2**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |cu|This is control unit module. It acts like a controller which is pass control signal to the datapath based on each stage.|
@@ -29,7 +29,7 @@ The second task of the lab is to design, functionally verify the control unit (C
 
   The third task is to connect the DP and CU module by creating another module call calculator and further functionally verify it. Similar to the input of task 1 and 2, this task provides the same amount of clock cycle and proper inputs to the top level module which would receive only the final result of the operation, the current state(CS), and the finished signal (done) at the end of the state.
 
-# Table 3: List of module for task 3
+** Table 3: List of module for task 3**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |calculator|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
@@ -37,7 +37,7 @@ The second task of the lab is to design, functionally verify the control unit (C
 
   The fourth task is hardware validation the small calculator machine. The clock for this module is a debounce button. The inputs in, in2, op are DIP switches. The current state(CS) and the output result(out) are the seven-segment LED.
 
-# Table 4: List of module for task 4
+** Table 4: List of module for task 4**
 | Module  |      Function      |
 |:-------------------:|:---------------------------------------------------------------------------------------------------:|
 |calculator_FPGA|This is a top-level module of calculator. It will contain both control-unit module and datapath module.|
@@ -85,14 +85,14 @@ The second task of the lab is to design, functionally verify the control unit (C
   The testbench for this task would randomly generate 4 combinations of inputs in1 and in2. For each of the input combination, In the first clock cycle, the testbench first store the in1 to the register by setting s1_tb=01, we_tb=1, wa_tb = 01. Then, setting s1=10, wa_tb = 10 to store in data to the register for the next clock cycle. The register module then read out both data inputs by setting raa_tb=01, rea_tb=10, rea_tb=1, and reb_tb=1. To get the result, the two read inputs then go through the alu. Based on the input operation given by op_tb, the alu produces the result. In this case, our testbench went through all possible operations from addition(op_tb =00), subtraction(op_tb =01), and(op_tb =10), xor(op_tb =11). Every time the result received by an operation, it is stored in the register by setting s1_tb=11, wa_tb=11 in a clock cycle. Lastly, we output the result by reading out the same address rea_tb =11, rea_tb =11, set the alu operation to and(10), and s2=1 in another clock cycle. For instance, the first input was 4(in1_tb), the second input was 1(in1_tb). The first two clock cycles were to write them to the register. In the for loop of incrementing operation, the output became 5(4+1), 4-1(3), 0(4&1), 5(4^0) which was as expected. For this reason, the simulation verification was successful.
 
 
-# Task 2
+## Task 2
 ![sdf](https://lh4.googleusercontent.com/PC6XtMDqmJp94DGOPqq3scdSZIRiaBayNqd5liGVtvihX-AXQfZH0U1LNviSHFFSI7cWw79vh3SRenGPCD8E19F4ilXAZduOoqMYR88O8AMRP4Y7IPejJdTAnHi3iuFwPTckVEo)
 
 *Figure 7: Simulation waveforms produced from Task 2*
 
   The testbench for this task would go through all possible operation(op_tb from 00 to 11) and have go_tb input signal that always turn high (1) to make the system always go to the next state without interruption from one operation to another. In each of the operation, the testbench would clock 6 times to go from state 0 to state 8. According to Figure 7 , the output for each state was then compared to the Output Logic table observed in Table 2 above. Since the simulated outputs matched the expected outputs in Table2, the functional verification process for this task was successful.
 
-# Task 3
+## Task 3
 
 ![sdf](https://lh5.googleusercontent.com/XggltCv3elLWoYuEfgB8w--7SwuC2mAEdcjDdqFb5Rt-lVIkWA1PIr8imMw_T6t2gseynwrB1LZCeFXbXwH-Kj5on3Xl8cfxlaKNRcNDF4L29yqPiRf7LC5Do_19Wl9Ny-GAx-k)
 
@@ -229,7 +229,7 @@ assign doutb = (reb == 1'b1)? RegFile[rab] : 4'b0;//when b is enable
 endmodule
 ```
 
-# alu.v
+#### alu.v
 
 ```v
 module alu (
@@ -262,7 +262,7 @@ assign out = (sel == 1'b1)? in1 : in0;
 endmodule
 ```
 
-# small_calculator_dp_tb.v
+#### small_calculator_dp_tb.v
 
 ```v
 module small_calculator_dp_tb;
@@ -351,10 +351,10 @@ end
 endmodule
 ```
 
-# Task 2
+#### Task 2
 
 
-# cu.v
+#### cu.v
 
 ```v
 module CU(input go,
@@ -567,7 +567,7 @@ end
 endmodule
 ```
 
-# cu_tb.v
+#### cu_tb.v
 
 ```v
 module CU_tb;
@@ -633,9 +633,9 @@ end
 endmodule
 ```
 
-# Task3:
+### Task3:
 
-# calculator.v
+#### calculator.v
 
 ```v
 module calculator(input go,
@@ -678,14 +678,9 @@ small_calculator_dp DP(.clk(clk),
 endmodule
 ```
 
-# calculator_tb.v
+### Task4:
 
-```
-Work in progress
-```
-# Task4:
-
-# calculator_FPGA.v
+#### calculator_FPGA.v
 
 ```
 module calculator_FPGA(input wire go,
@@ -745,7 +740,7 @@ endmodule
 ```
 
 
-# clk_gen.v
+#### clk_gen.v
 
 ```v
 module clk_gen (
@@ -778,7 +773,7 @@ end
 endmodule
 ```
 
-# button_debouncer.v
+#### button_debouncer.v
 
 ```v
 module button_debouncer #(parameter depth = 16) (
@@ -800,7 +795,7 @@ end
 endmodule
 ```
 
-# binary2bcd.v
+#### binary2bcd.v
 
 ```v
 module binary2bcd(number, hundreds, tens, units);
@@ -837,7 +832,7 @@ endmodule
 
 ```
 
-# bcd_to_7seg.v
+#### bcd_to_7seg.v
 
 ```v
 module bcd_to_7seg (
@@ -862,7 +857,7 @@ end
 endmodule
 ```
 
-# led_mux.v
+#### led_mux.v
 
 ```v
 module led_mux (
@@ -892,7 +887,7 @@ end
 endmodule
 ```
 
-# calculator_constraints.xdc
+#### calculator_constraints.xdc
 
 ```
 # Clock signal
